@@ -1,6 +1,6 @@
 {
   "name": "velocity",
-  "version": "0.6.9",
+  "version": "0.7.2",
   "description": "A node velocity template engine.",
   "homepage": "https://github.com/fool2fish/velocity",
   "keywords": [
@@ -10,11 +10,14 @@
     "engine"
   ],
   "author": "fool2fish <fool2fish@gmail.com>",
+  "scripts": {
+    "test": "mocha -R spec -t 15000 -r should test/*.test.js",
+    "test-cov": "istanbul cover node_modules/.bin/_mocha -- -t 15000 -r should test/*.test.js"
+  },
   "dependencies": {
-    "colorful": "2.1.0",
-    "commander": "1.2.0",
-    "express": "4.2.0",
-    "tracer": "0.6.1",
+    "colorful": "~2.1.0",
+    "commander": "~2.3.0",
+    "tracer": "~0.7.3",
     "utilx": "0.0.5"
   },
   "devDependencies": {
@@ -23,7 +26,10 @@
     "mocha": "*",
     "should": "3.3.1",
     "istanbul": "*",
-    "cov": "*"
+    "cov": "*",
+    "jshint": "*",
+    "mocha": "*",
+    "should": "~5.2.0"
   },
   "repository": {
     "type": "git",
